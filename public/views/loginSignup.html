@@ -1,0 +1,22 @@
+<div>
+    <div>
+        <p>Signup</p>
+        <form ng-submit="signup(signupInfo)">
+            <input type="" name="" value="" ng-model="firstname" placeholder="firstname">
+            <input type="" ng-model="username" placeholder="username">
+            <input type="password" ng-model="password" placeholder="password">
+            <button>submit</button>
+        </form>
+        <p>{{signupResponse}}</p>
+    </div>
+    <br>
+    <div>
+        <p>Login</p>
+        <form ng-submit="login(loginInfo)">
+            <input type="text" ng-model="usernameForm" placeholder="username"> 
+            <input type="password" ng-model="passwordForm" placeholder="password">
+            <button>submit</button>
+        </form>
+        <p>{{loginResponse}}</p>
+    </div>
+</div>
