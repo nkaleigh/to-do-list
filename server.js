@@ -22,10 +22,8 @@ massive({connectionString: config.elephantsql}).then(function(db) {
 const controller = require('./serverCtrl');
 
 
-// app.get('/api/test/:name', controller.getTest);
-// app.delete('/api/delete/:name', controller.deleteName);
 app.post('/api/signup/', controller.signup);
-app.post('/api/login/', controller.login);
+app.post('/api/login/', controller.validateLogin);
 
 
 

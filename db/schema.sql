@@ -18,7 +18,7 @@ create table todo (
 );
 
 insert into test (name, age)
-values ('Kaleigh', 28);
+values ('Kaleigh', 28), ('Oshion', 25), ('Landon', 23), ('Sarae', 21);
 
 insert into users (username, password, firstname)
 values ('tim', 'password', 'Timothy'), ('anna', 'password', 'Anna'), ('brianna', 'password', 'Brianna'), ('cody', 'password', 'Cody');

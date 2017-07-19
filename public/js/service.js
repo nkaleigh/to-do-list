@@ -1,14 +1,22 @@
 angular.module('App').service('service', function($http) {
-    // this.test = function(bee) {
-    //     return $http.get(`/api/test/${bee}`)
-    // }
-    // this.test2 = function(apple) {
-    //     return $http.delete(`/api/delete/${apple}`)
-    // }
     this.login = function(loginInfo) {
-        return $http.get('/api/login');
+        console.log('this.login', loginInfo);
+        return $http ({
+            method: 'POST',
+            url: '/api/login/',
+            data: loginInfo
+        }).then(function(response){
+            $state.go('home', { userid: 'response.data[0].id'});
+        });
     };
     this.signup = function(signupInfo) {
-        return $http.get('/api/signup');
+        console.log('this.signup', signupInfo);
+        return $http({
+            method: 'POST',
+            url: '/api/signup/',
+            data: signupInfo
+        }).then(function(response){
+            return response;
+        });
     };
 });

@@ -1,12 +1,15 @@
-angular.module('App').controller('loginSignupController', function($scope, service) {
+angular.module('App').controller('loginSignupController', function($scope, $state, service) {
     $scope.login = function(loginInfo) {
-        service.login(loginInfo).then(function(response) {
-            $scope.loginResponse = response;
+        console.log('loginInfo', loginInfo);
+        service.login(loginInfo).then(function(response){
+            $scope.loginResponse = loginResponse;
         });
     };
     $scope.signup = function(signupInfo) {
+        console.log('signupInfo', signupInfo);
         service.signup(signupInfo).then(function(response) {
-            $scope.signupResponse = response;
+            console.log('response from service', response);
+            $scope.signupResponse = response.data[0];
         });
     };
 });
