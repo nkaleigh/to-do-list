@@ -1,21 +1,30 @@
-angular.module('App').service('service', function($http) {
+angular.module('App').service('service', function($http, $state) {
     this.login = function(loginInfo) {
-        console.log('this.login', loginInfo);
         return $http ({
             method: 'POST',
             url: '/api/login/',
             data: loginInfo
-        }).then(function(response){
-            $state.go('home', { userid: 'response.data[0].id'});
+        }).then(function(response) {
+            console.log('loginresponse', response.data.id);
+            $state.go('home', { userId: response.data.id});
         });
     };
     this.signup = function(signupInfo) {
-        console.log('this.signup', signupInfo);
-        return $http({
+        return $http ({
             method: 'POST',
             url: '/api/signup/',
             data: signupInfo
-        }).then(function(response){
+        }).then(function(response) {
+            return response;
+        });
+    };
+    this.todo = function(id) {
+        console.log('this.todo', id);
+        return $http ({
+            method: 'GET',
+            url: '/api/gettodo/:id',
+            params: { id : id}
+        }).then(function(response) {
             return response;
         });
     };

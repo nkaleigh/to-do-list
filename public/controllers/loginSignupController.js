@@ -1,8 +1,7 @@
-angular.module('App').controller('loginSignupController', function($scope, $state, service) {
+angular.module('App').controller('loginSignupController', function($scope, service) {
     $scope.login = function(loginInfo) {
         console.log('loginInfo', loginInfo);
-        service.login(loginInfo).then(function(response){
-            $scope.loginResponse = loginResponse;
+        service.login(loginInfo).then(function(response) {
         });
     };
     $scope.signup = function(signupInfo) {

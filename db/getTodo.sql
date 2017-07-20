@@ -1,2 +1,2 @@
-select task from todo 
-where userid = $1;
+select * from todo 
+where userId = $1;

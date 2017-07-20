@@ -1,6 +1,3 @@
-// const app = require('./server');
-// const db = app.get('db');
-
 module.exports = {
         signup: function(req, res) {
             console.log('reachedserverCtrl');
@@ -26,7 +23,6 @@ module.exports = {
             });
         },
         validateLogin: function(req, res) {
-            console.log('req');
             let params = [
                 req.body.username,
                 req.body.password
@@ -35,13 +31,19 @@ module.exports = {
                 if(!user[0]) {
                     res.status(400).send();
                 } else {
-                    let userId = user[0].id;
-                    req.app.get('db').getTodo(userId).then(function(todo){
-                        res.status(200).send(todo);
-                    }).catch(function(err){
-                        res.status(500).send(err);
-                    });
+                    res.status(200).send(user[0]);
                 }
+            }).catch(function(err) {
+                res.status(500).send(err);
+            });
+        },
+        getTodo: function(req, res) {
+            console.log('req', req);
+            let id = req.param.userId;
+            console.log('id',id);
+            req.app.get('db').getTodo(id).then(function(todo) {
+                console.log('todo', todo);
+                res.status(200).send(todo);
             }).catch(function(err) {
                 res.status(500).send(err);
             });
@@ -61,13 +63,6 @@ module.exports = {
         //     req.app.get('db').getUser(req.body.userid).then(function(user) {
         //         res.send(user);
         //     }).catch(function(err) {
-        //         res.status(500).send(err);
-        //     });
-        // },
-        // getTodo: function(req, res) {
-        //     req.add.get('db').getTodo(req.body.userid).then(function(todo) {
-        //         res.send(todo);
-        //     }).catch(function(err){
         //         res.status(500).send(err);
         //     });
         // },

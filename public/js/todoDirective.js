@@ -3,7 +3,8 @@ angular.module('App').directive('mainDirective', function() {
         restrict: 'E',
         templateUrl: '../views/mainDirective.html',
         scope: {
-            todo: '='
+            todo: '=',
+            hoho: '='
         }
     }
 });

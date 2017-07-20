@@ -4,7 +4,7 @@ angular.module('App', ['ui.router']).config(function($stateProvider, $urlRouterP
     $urlRouterProvider.otherwise('/login');
 
     $stateProvider.state('home', {
-        url: '/',
+        url: '/home/:userId',
         templateUrl: './views/home.html',
         controller: 'homeController',
     })
