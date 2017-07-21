@@ -5,8 +5,7 @@ angular.module('App').service('service', function($http, $state) {
             url: '/api/login/',
             data: loginInfo
         }).then(function(response) {
-            console.log('loginresponse', response.data.id);
-            $state.go('home', { userId: response.data.id});
+            $state.go('home', { userId: response.data.id });
         });
     };
     this.signup = function(signupInfo) {
@@ -15,17 +14,23 @@ angular.module('App').service('service', function($http, $state) {
             url: '/api/signup/',
             data: signupInfo
         }).then(function(response) {
-            return response;
+            $state.go('home', { userId: response.data.id });
         });
     };
-    this.todo = function(id) {
-        console.log('this.todo', id);
-        return $http ({
-            method: 'GET',
-            url: '/api/gettodo/:id',
-            params: { id : id}
-        }).then(function(response) {
-            return response;
-        });
-    };
+    // this.todo = function(id) {
+    //     console.log('this.todo', id);
+    //     return $http ({
+    //         method: 'GET',
+    //         url: '/api/gettodo/',
+    //         params: {idForUser: id},
+    //         paramSerializer: '$httpParamSerializerJQLike'
+    //     }).then(function(response) {
+    //         return response;
+    //     });
+    // };
+        this.todo = function(id) {
+            return $http.get('/api/gettodo/' + id).then(function(response) {
+                return response;
+            });
+        };
 });

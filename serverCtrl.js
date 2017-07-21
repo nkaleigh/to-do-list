@@ -1,6 +1,5 @@
 module.exports = {
         signup: function(req, res) {
-            console.log('reachedserverCtrl');
             let username = req.body.username;
             let password = req.body.password;
             let firstname = req.body.firstname;
@@ -8,7 +7,7 @@ module.exports = {
                 if(username[0] === undefined) {
                     req.app.get('db').addUser([req.body.username, req.body.password, req.body.firstname]).then(function(userinfo) {
                        req.app.get('db').login([req.body.username, req.body.password]).then(function(user) {
-                           res.status(200).send(user);
+                           res.status(200).send(user[0]);
                        }).catch(function(err) {
                            res.status(500).send(err);
                        })
@@ -38,11 +37,8 @@ module.exports = {
             });
         },
         getTodo: function(req, res) {
-            console.log('req', req);
-            let id = req.param.userId;
-            console.log('id',id);
+            let id = req.params.idForUser;
             req.app.get('db').getTodo(id).then(function(todo) {
-                console.log('todo', todo);
                 res.status(200).send(todo);
             }).catch(function(err) {
                 res.status(500).send(err);

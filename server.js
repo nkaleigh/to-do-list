@@ -24,7 +24,7 @@ const controller = require('./serverCtrl');
 
 app.post('/api/signup/', controller.signup);
 app.post('/api/login/', controller.validateLogin);
-app.get('/api/gettodo/:id', controller.getTodo);
+app.get('/api/gettodo/:idForUser', controller.getTodo);
 
 
 
