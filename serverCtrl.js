@@ -37,41 +37,24 @@ module.exports = {
             });
         },
         getTodo: function(req, res) {
+            console.log('req.params', req.params);
             let id = req.params.idForUser;
             req.app.get('db').getTodo(id).then(function(todo) {
                 res.status(200).send(todo);
             }).catch(function(err) {
                 res.status(500).send(err);
             });
+        },
+        addTask: function(req, res) {
+            console.log('reached addTask');
+            let params = [
+                req.body.todoUserId, req.body.todoTask
+            ];
+            req.app.get('db').addTodo(params).then(function(response) {
+                res.status(200).send(response);
+            }).catch(function(err) {
+                res.status(500).send(err);
+            });
         }
-        // addTodo: function(req, res) {
-        //     let params = [
-        //         req.body.userid,
-        //         req.body.todoitem
-        //     ];
-        //     req.app.get('db').addTodo(params).then(function(todo) {
-        //         res.send('item added');
-        //     }).catch(function (err) {
-        //         res.status(500).send(err);
-        //     });
-        // },
-        // getUser: function (user) {
-        //     req.app.get('db').getUser(req.body.userid).then(function(user) {
-        //         res.send(user);
-        //     }).catch(function(err) {
-        //         res.status(500).send(err);
-        //     });
-        // },
-        // deleteTodo: function(req, res) {
-        //     let params = [
-        //         req.body.userid,
-        //         req.body.todoitem
-        //     ];
-        //     req.app.get('db').deleteTodo(params).then(function(deleted) {
-        //         res.send('item deleted');
-        //     }).catch(function(err){
-        //         res.status(500).send(err);
-        //     });
-        // }
 };
 

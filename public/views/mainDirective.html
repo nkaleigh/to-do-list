@@ -1,4 +1,13 @@
 <section>
-    <p>test</p>
-    {{todo}}
+    <br>
+    <form>
+        <input type="text" placeholder="New Item" ng-model="tasket.task">
+        <button type="button" ng-click="addTaskFunc({newTaskParam:tasket})">+</button>
+    </form>
+<button>test</button>
+    <br>
+    <div ng-repeat="todoTask in todo">
+        <p>{{todoTask.task}}</p>
+        <button type="submit"  ng-click="coolestTest()">-</button>
+    </div>
 </section>

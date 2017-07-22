@@ -1,11 +1,13 @@
 angular.module('App').service('service', function($http, $state) {
     this.login = function(loginInfo) {
+        console.log('send');
         return $http ({
             method: 'POST',
             url: '/api/login/',
             data: loginInfo
         }).then(function(response) {
-            $state.go('home', { userId: response.data.id });
+                        console.log('response', response);
+            $state.go('home', { userId: response.data.id, firstNameParam: response.data });
         });
     };
     this.signup = function(signupInfo) {
@@ -33,4 +35,10 @@ angular.module('App').service('service', function($http, $state) {
                 return response;
             });
         };
+        this.addTask = function(newTask) {
+            console.log('service:newTask', newTask);
+            return $http.post('/api/addtask/', newTask).then(function(response) {
+                return response;
+            })
+        }
 });

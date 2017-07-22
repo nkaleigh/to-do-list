@@ -4,7 +4,7 @@ angular.module('App').directive('mainDirective', function() {
         templateUrl: '../views/mainDirective.html',
         scope: {
             todo: '=',
-            hoho: '='
+            addTaskFunc: '&',
         }
     }
 });
