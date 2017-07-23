@@ -5,6 +5,7 @@ angular.module('App').directive('mainDirective', function() {
         scope: {
             todo: '=',
             addTaskFunc: '&',
+            deleteTaskFunc: '&'
         }
     }
 });

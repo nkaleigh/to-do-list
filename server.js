@@ -26,6 +26,7 @@ app.post('/api/signup/', controller.signup);
 app.post('/api/login/', controller.validateLogin);
 app.get('/api/gettodo/:idForUser', controller.getTodo);
 app.post('/api/addtask/', controller.addTask);
+app.delete('/api/deleteTask/:taskitem', controller.deleteTask);
 
 
 

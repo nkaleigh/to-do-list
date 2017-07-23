@@ -7,7 +7,7 @@ angular.module('App', ['ui.router']).config(function($stateProvider, $urlRouterP
         url: '/home/:userId',
         templateUrl: './views/home.html',
         controller: 'homeController',
-        params: {firstNameParam: null}
+        params: {firstNameParam: null, taskToDelete: null}
     })
     .state('login', {
         url: '/login',
