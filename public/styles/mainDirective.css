@@ -3,7 +3,7 @@
     height: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 18px;
+    margin-top: 8px;
     /* background: orangered;    */
 }
 .mainDirective-innerwrap-addtask {
@@ -26,10 +26,10 @@
 .mainDirective-innerwrap-tasklist-container {
     width: 100%;
     height: 79%;
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 1.1em;
     overflow: scroll;
-     /* background: orange;  */
+      /* background: orange;   */
 }
 .mainDirective-innerwrap-tasklist-form {
     width: auto;
