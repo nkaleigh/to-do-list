@@ -1,21 +1,29 @@
-<div>
-    <div>
-        <p>Signup</p>
-        <form ng-submit="signup(signupInfo)">
-            <input type="" name="" value="" ng-model="signupInfo.firstname" placeholder="firstname" required>
-            <input type="" ng-model="signupInfo.username" placeholder="username" required>
-            <input type="password" ng-model="signupInfo.password" placeholder="password" required>
-            <button>submit</button>
-        </form>
-        {{signupResponse}}
-    </div>
-    <br>
-    <div>
-        <p>Login</p>
-        <form ng-submit="login(loginInfo)">
-            <input type="text" ng-model="loginInfo.username" placeholder="username" required> 
-            <input type="password" ng-model="loginInfo.password" placeholder="password" required>
-            <button>submit</button>
-        </form>
+<!DOCTYPE html>
+<div class="loginsignup-outerwrap">
+    <div class="loginsignup-innerwrap">
+        <div class="loginsignup-innerwrap-title-container">
+            <div class="loginsignup-innerwrap-title">The Task App</div>
+        </div>
+        <div class="loginsignup-innerwrap-container">
+            <div class="loginsignup-innerwrap-signup">
+                <p class="loginsignup-innerwrap-signup-title">Signup</p>
+                <form class="loginsignup-innerwrap-signup-form" ng-submit="signup(signupInfo)">
+                    <input type="" name="" value="" ng-model="signupInfo.firstname" placeholder="firstname" required>
+                    <input type="" ng-model="signupInfo.username" placeholder="username" required>
+                    <input type="password" ng-model="signupInfo.password" placeholder="password" required>
+                    <button>submit</button>
+                </form>
+                {{signupResponse}}
+            </div>
+            <br>
+            <div class="loginsignup-innerwrap-login">
+                <p class="loginsignup-innerwrap-login-title">Login</p>
+                <form class="loginsignup-innerwrap-login-form" ng-submit="login(loginInfo)">
+                    <input type="text" ng-model="loginInfo.username" placeholder="username" required>
+                    <input type="password" ng-model="loginInfo.password" placeholder="password" required>
+                    <button>submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
