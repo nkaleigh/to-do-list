@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<section>
-    <br>
-    <form>
-        <input type="text" placeholder="New Item" ng-model="tasket.task">
-        <button type="button" ng-click="addTaskFunc({newTaskParam:tasket})">+</button>
+<form class="mainDirective-innerwrap-addtask-container">
+    <input class="mainDirective-innerwrap-addtask" type="text" placeholder="New Item" ng-model="tasket.task">
+    <div class="mainDirective-innerwrap-fa-plus-container">
+        <i class="fa fa-plus" aria-hidden="true" ng-click="addTaskFunc({newTaskParam:tasket})"></i>
+    </div>
+</form>
+<div class="mainDirective-innerwrap-tasklist-container">
+    <form class="mainDirective-innerwrap-tasklist-form" ng-repeat="todoTask in todo">
+        <div class="mainDirective-innerwrap-tasklist-task">{{todoTask.task}}</div>
+        <div class="mainDirective-innerwrap-fa-minus-container">
+            <i class="fa fa-minus" aria-hidden="true" ng-click="deleteTaskFunc({dt:todoTask})"></i>
+        </div>
     </form>
-    <br>
-    <br>
-    <form ng-repeat="todoTask in todo">
-        <p>{{todoTask.task}}</p>
-        <button type="button"  ng-click="deleteTaskFunc({dt:todoTask})">-</button>
-    </form>
-</section>
+</div>

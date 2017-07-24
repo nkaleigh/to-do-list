@@ -2,26 +2,29 @@
 <div class="loginsignup-outerwrap">
     <div class="loginsignup-innerwrap">
         <div class="loginsignup-innerwrap-title-container">
-            <div class="loginsignup-innerwrap-title">The Task App</div>
+            <div class="loginsignup-innerwrap-title">THE TASK APP</div>
         </div>
         <div class="loginsignup-innerwrap-container">
-            <div class="loginsignup-innerwrap-signup">
-                <p class="loginsignup-innerwrap-signup-title">Signup</p>
-                <form class="loginsignup-innerwrap-signup-form" ng-submit="signup(signupInfo)">
-                    <input type="" name="" value="" ng-model="signupInfo.firstname" placeholder="firstname" required>
-                    <input type="" ng-model="signupInfo.username" placeholder="username" required>
-                    <input type="password" ng-model="signupInfo.password" placeholder="password" required>
-                    <button>submit</button>
+            <div class="loginsignup-innerwrap-login">
+                <p class="loginsignup-innerwrap-login-title">Log In</p>
+                <form class="loginsignup-innerwrap-login-form" ng-submit="login(loginInfo)">
+                    <input class="loginsignup-innerwrap-login-form-username" type="text" ng-model="loginInfo.username" placeholder="username"
+                        required>
+                    <input class="loginsignup-innerwrap-login-form-password" type="password" ng-model="loginInfo.password" placeholder="password"
+                        required>
+                    <button class="loginsignup-innerwrap-login-form-button">Log In</button>
                 </form>
-                {{signupResponse}}
             </div>
             <br>
-            <div class="loginsignup-innerwrap-login">
-                <p class="loginsignup-innerwrap-login-title">Login</p>
-                <form class="loginsignup-innerwrap-login-form" ng-submit="login(loginInfo)">
-                    <input type="text" ng-model="loginInfo.username" placeholder="username" required>
-                    <input type="password" ng-model="loginInfo.password" placeholder="password" required>
-                    <button>submit</button>
+            <div class="loginsignup-innerwrap-signup">
+                <p class="loginsignup-innerwrap-signup-title">Sign Up</p>
+                <form class="loginsignup-innerwrap-signup-form" ng-submit="signup(signupInfo)">
+                    <input class="loginsignup-innerwrap-signup-form-firstname" type="" name="" value="" ng-model="signupInfo.firstname" placeholder="firstname"
+                        required>
+                    <input class="loginsignup-innerwrap-signup-form-username" type="" ng-model="signupInfo.username" placeholder="username" required>
+                    <input class="loginsignup-innerwrap-signup-form-password" type="password" ng-model="signupInfo.password" placeholder="password"
+                        required>
+                    <button class="loginsignup-innerwrap-signup-form-button">Sign Up</button>
                 </form>
             </div>
         </div>

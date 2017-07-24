@@ -1,6 +1,13 @@
 <!DOCTYPE html>
-<div>
-    <p>{{firstName}}'s To Do List</p>
-    <main-directive todo="list" add-task-func="addTask(newTaskParam)" delete-task-func="deleteTask(dt)"></main-directive>
+<div class="home-outerwrap">
+    <div class="home-innerwrap-wrapper">
+        <div class="home-innerwrap">
+            <div class="home-innerwrap-title-container">
+                <p class="home-innerwrap-title">{{firstName}}'s TASKS</p>
+            </div>
+            <div class="home-innerwrap-task-container">
+                <main-directive todo="list" add-task-func="addTask(newTaskParam)" delete-task-func="deleteTask(dt)"></main-directive>
+            </div>
+        </div>
+    </div>
 </div>
- 

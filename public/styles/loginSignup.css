@@ -9,7 +9,7 @@
 
 .loginsignup-innerwrap {
     width: 340px;
-    height: 400px;
+    height: 446px;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid grey;
     /* background: yellow; */
@@ -19,55 +19,87 @@
     width: 100%;
     height: 70px;
     /* border-bottom: 1px solid white; */
-     background: grey; 
+     /* background: grey;  */
 }
 
 .loginsignup-innerwrap-title {
     width: 100%;
     height: auto;
     position: relative;
-    top: 50%;
+    top: 54%;
     transform: translateY(-50%);
     font-size: 2.2em;
-    color: white;
+    color: black;
     text-align: center;
-    /* background: purple;  */
+    /* background: purple;     */
 }
 .loginsignup-innerwrap-container {
     width: auto;
     height: auto;
-    padding: 20px;
-    background: blue;
+    padding: 18px 25px 25px 25px;
+    /* background: blue;    */
 }
 .loginsignup-innerwrap-signup {
     width: 100%;
     height: auto;
     margin: auto;
-     background: green; 
+     /* background: green;   */
 }
-
-.loginsignup-innerwrap-signup-form {
+.loginsignup-innerwrap-signup-title {
     width: 100%;
+    height: 30px;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: black;
+}
+.loginsignup-innerwrap-signup-form {
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
-    background: pink;
+    /* background: pink; */
 }
-
-.loginsignup-innerwrap-signup-title {
+.loginsignup-innerwrap-signup-form-firstname {
+    width: auto;
+    height: 30px;
+    font-size: 1.1em;
+}
+.loginsignup-innerwrap-signup-form-username {
+    width: auto;
+    height: 30px;
+    font-size: 1.1em;
+    margin-top: 3px;
+}
+.loginsignup-innerwrap-signup-form-password {
+    width: auto;
+    height: 30px;
+    font-size: 1.1em;
+    margin-top: 3px;
+}
+.loginsignup-innerwrap-signup-form-button {
     width: 100%;
-    height: auto;
-    font-size: 1.25em;
-    color: grey;
+    height: 30px;
+    font-size: .8em;
+    border: none;
+    border-radius: 2.5px;
+    color: white;
+    margin-top: 3px;
+    cursor: pointer;
+    background: #af2e15;
 }
-
 .loginsignup-innerwrap-login {
     width: 100%;
     height: auto;
     margin: auto;
-     background: orange; 
+    /* background: orange;  */
 }
-
+.loginsignup-innerwrap-login-title {
+    width: 100%;
+    height: 30px;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: black;
+}
 .loginsignup-innerwrap-login-form {
     width: 100%;
     height: auto;
@@ -75,10 +107,25 @@
     flex-direction: column;
     background: white;
 }
-
-.loginsignup-innerwrap-login-title {
+.loginsignup-innerwrap-login-form-username {
+    width: auto;
+    height: 30px;
+    font-size: 1.1em;
+}
+.loginsignup-innerwrap-login-form-password {
+    width: auto;
+    height: 30px;
+    font-size: 1.1em;
+    margin-top: 3px;
+}
+.loginsignup-innerwrap-login-form-button {
     width: 100%;
-    height: auto;
-    font-size: 1.25em;
-    color: grey;
+    height: 30px;
+    font-size: .8em;
+    border: none;
+    border-radius: 2.5px;
+    color: white;
+    margin-top: 3px;
+    cursor: pointer;
+    background: #af2e15;
 }
